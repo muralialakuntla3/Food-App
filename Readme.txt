@@ -22,7 +22,7 @@ link back to this site is required, however any credit will be much appreciated.
 
 Prohibitions:
 You do not have the rights to redistribute, resell, lease, license, sublicense or offer 
-files downloaded from http://bootstrapthemes.co to any third party ìas isî or as a separate attachment 
+files downloaded from http://bootstrapthemes.co to any third party Ã¬as isÃ® or as a separate attachment 
 from any of your work. If you wish to promote my resources on your site, you must link back 
 to the resource page where users can find the download and not directly to the download file.
 
@@ -33,4 +33,5 @@ resource on http://bootstrapthemes.co , you can if you wish insert the embed cod
 No HOTLINKING is allowed i.e. you cannot make a direct link to the download or/and the images hosted on http://bootstrapthemes.co
 
 Concerning blog posts, you are free to link to it from any website, 
+testing triggers
 but you cannot however publish it as it is, without prior consent from http://bootstrapthemes.co
