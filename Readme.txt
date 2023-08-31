@@ -1,38 +1,21 @@
-== Theme Name: Food And Restaurant Psd Template
+# Cloud Formation - IaC
 
-== Copyright (c) 2016 BootstrapThemes.co
+## Templates: 
+CloudFormation uses templates written in JSON or YAML format to describe the desired AWS resources and their configurations. These templates define the structure of your infrastructure.
+## Stacks: 
+A stack is a collection of AWS resources created and managed as a single unit. You create a stack by providing a CloudFormation template, and CloudFormation handles the creation, updating, and deletion of the resources defined in the template.
 
-== http://BootstrapThemes.co
+## create template for ec2 setup and app deployment
+## create cloud formation stack
+   ### Goto aws cloud
+   ### Goto services section and choose CloudFormation
+   ### Left side choose Stack
+   ### Create stack
+        Step-1 : create stack
+        Step-2 : specify stack details
+        Step-3 : configure stack options
+        Step-4 : review & create
 
-
-Html Created by: http://bootstrapthemes.co
-
-
-
-Psd Created by: https://www.behance.net/gallery/32552907/Food-And-Restaurant-Psd-Template
-
-
-
-Rights: 
-You are permitted to use the resources for any number of personal and commercial projects.
-You may modify the resources according to your requirements and include them into works, 
-such as websites, applications or other materials intended for sale. No attribution or 
-link back to this site is required, however any credit will be much appreciated.
-
-
-Prohibitions:
-You do not have the rights to redistribute, resell, lease, license, sublicense or offer 
-files downloaded from http://bootstrapthemes.co to any third party ìas isî or as a separate attachment 
-from any of your work. If you wish to promote my resources on your site, you must link back 
-to the resource page where users can find the download and not directly to the download file.
-
-
-
-If you would like to share one of my resources, you can do so by making a link to the specific 
-resource on http://bootstrapthemes.co , you can if you wish insert the embed code for the product previews images to illustrate your link. 
-No HOTLINKING is allowed i.e. you cannot make a direct link to the download or/and the images hosted on http://bootstrapthemes.co
-
-Concerning blog posts, you are free to link to it from any website, 
-testing triggers
-testing  2
-but you cannot however publish it as it is, without prior consent from http://bootstrapthemes.co
+## Don’t forget to delete things
+    Stack : -> CloudFormation -> stack -> delete
+    S3 bucket: -> S3 buckets -> empty bucket -> delete bucket
