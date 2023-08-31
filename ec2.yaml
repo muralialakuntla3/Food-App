@@ -1,0 +1,49 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Description: Create an EC2 instance
+
+Parameters:
+  InstanceType:
+    Description: EC2 instance type
+    Type: String
+    Default: t2.micro
+    AllowedValues:
+      - t2.micro
+      - t2.small
+      - t2.medium
+      # Add more instance types as needed
+
+  VpcId:
+    Description: VPC ID where the EC2 instance will be launched
+    Type: AWS::EC2::VPC::Id
+
+  SubnetId:
+    Description: Subnet ID within the VPC
+    Type: AWS::EC2::Subnet::Id
+
+Resources:
+  MyEC2Instance:
+    Type: AWS::EC2::Instance
+    Properties:
+      InstanceType: t2.micro
+      ImageId: ami-08e5424edfe926b43  # Replace with a valid AMI ID
+      KeyName: 9-key            # Replace with your key pair name
+      SecurityGroupIds:
+        - sg-0c506d022c8cb36a6        # Replace with the ID of your existing security group
+      BlockDeviceMappings:
+        - DeviceName: /dev/sdf
+          Ebs:
+            VolumeSize: 10    # Size of the EBS volume in GB
+            VolumeType: gp2   # EBS volume type (gp2 for General Purpose SSD)
+            DeleteOnTermination: true  # The volume will be deleted when the instance is terminated
+      UserData:
+        Fn::Base64: !Sub |
+          #!/bin/bash
+          sudo apt-get update
+          sudo apt-get install -y nginx
+          sudo rm -rf /var/www/html/*
+          sudo git clone https://github.com/muralialakuntla3/Food-App.git
+          sudo cp -rf Food-App/* /var/www/html/
+          sudo systemctl restart nginx
+      Tags:
+        - Key: Name
+          Value: food-app 
