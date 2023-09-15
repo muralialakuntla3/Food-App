@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: food-deployment
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      component: food
+  template:
+    metadata:
+      labels:
+        component: food
+    spec:
+      containers:
+        - name: food
+          image: muralialakuntla3/food-app
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 90
+        
