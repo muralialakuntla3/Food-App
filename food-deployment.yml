@@ -19,7 +19,7 @@ spec:
           ports:
             - containerPort: 90
       tolerations:                 # Add this section for tolerations
-        - key: "dedicated"
+        - key: "critical"
           operator: "Equal"
           value: "special"
           effect: "NoSchedule"
